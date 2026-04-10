@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TeamEx Feedback</title>
+
+<style>
+body {
+  font-family: Arial;
+  background:#f4f7fb;
+  padding:15px;
+}
+
+.box {
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  max-width:400px;
+  margin:auto;
+}
+
+h2 {color:#2b6cb0;}
+
+.q {margin-top:15px;}
+
+.emoji span {
+  font-size:26px;
+  margin:8px;
+  cursor:pointer;
+}
+
+textarea {
+  width:100%;
+  margin-top:10px;
+  padding:8px;
+}
+
+button {
+  width:100%;
+  padding:10px;
+  margin-top:15px;
+  background:#2b6cb0;
+  color:white;
+  border:none;
+  border-radius:5px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>📩 TeamEx WhatsApp Feedback</h2>
+
+<p>Hello 😊<br>
+We’d love to hear your feedback regarding your experience with TeamEx.</p>
+
+<div class="q">
+<b>1️⃣ How easy was it for you to get your query resolved?</b><br>
+<div class="emoji">
+<span onclick="select(this)">😞</span> Difficult<br>
+<span onclick="select(this)">🙂</span> Average<br>
+<span onclick="select(this)">😀</span> Effortless
+</div>
+</div>
+
+<div class="q">
+<b>2️⃣ Please rate TeamEx representative support:</b><br>
+<div class="emoji">
+<span onclick="select(this)">😞</span> Dissatisfied<br>
+<span onclick="select(this)">🙂</span> Okay<br>
+<span onclick="select(this)">😀</span> Great
+</div>
+</div>
+
+<div class="q">
+<b>3️⃣ How satisfied are you with overall service? ⭐</b><br>
+<div class="emoji">
+<span onclick="select(this)">😞</span> Not satisfied<br>
+<span onclick="select(this)">🙂</span> Satisfied<br>
+<span onclick="select(this)">😀</span> Very satisfied
+</div>
+</div>
+
+<div class="q">
+<b>4️⃣ Any more feedback:</b><br>
+<textarea placeholder="✍️ Type your message here"></textarea>
+</div>
+
+<p style="margin-top:15px;">
+👉 Please select emoji for each question and send like:<br>
+😀 🙂 😀
+</p>
+
+<button onclick="submitForm()">Submit</button>
+
+</div>
+
+<script>
+function select(el){
+  let group = el.parentNode.querySelectorAll("span");
+  group.forEach(e => e.style.opacity = 0.4);
+  el.style.opacity = 1;
+}
+
+function submitForm(){
+  alert("Thank you for your feedback 😊");
+}
+</script>
+
+</body>
+</html>
